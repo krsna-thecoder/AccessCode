@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[a4paper,20pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -38,8 +38,8 @@
 \addtolength{\oddsidemargin}{-0.530in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.45in}
-\addtolength{\textheight}{1in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{rm}
 
@@ -49,7 +49,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-9pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
@@ -74,6 +74,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+% Project heading: title on the left, links on the right (single line, no tech-stack line)
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
@@ -91,26 +98,25 @@
 
 %----------HEADING-----------------
 
-\vspace{-12pt}
+\vspace{-30pt}
 
 \begin{center}
-    {\Huge \scshape KRISHNA KUMAR} \\ \vspace{2pt}
+    {\LARGE \scshape KRISHNA KUMAR} \\ \vspace{2pt}
     
-    +91-8797985328 \hspace{12pt} 
-    \href{mailto:krsna.thecoder@gmail.com}{\underline{krsna.thecoder@gmail.com}} \\ \vspace{1pt}
-    
-    \href{https://github.com/krsna-thecoder}{\underline{GitHub}} \hspace{18pt}
-    \href{https://linkedin.com/in/krishna-kumar-7b821b365}{\underline{LinkedIn}} \hspace{18pt}
-    \href{https://leetcode.com/u/KRSNA_THECODER/}{\underline{LeetCode}}
+    {\small +91-8797985328 \hspace{10pt} 
+    \href{mailto:krsna.thecoder@gmail.com}{\underline{krsna.thecoder@gmail.com}} \hspace{10pt}
+    \href{https://github.com/krsna-thecoder}{\underline{GitHub}} \hspace{10pt}
+    \href{https://linkedin.com/in/krishna-kumar-7b821b365}{\underline{LinkedIn}} \hspace{10pt}
+    \href{https://leetcode.com/u/KRSNA_THECODER/}{\underline{LeetCode}}}
 \end{center}
 
-\vspace{-6pt}
+\vspace{-4pt}
 
 %-----------SUMMARY-----------------
 
 \section{Summary}
 
-\vspace{2pt}
+\vspace{1pt}
 
 {\small Computer Science undergraduate (CGPA 9.2, top 1\% of department) specializing in event-driven backend systems and applied machine learning. Delivered production software across 7+ industrial sites at Tata Steel, authored comparative ML research at IIT (ISM) Dhanbad, and shipped 2 live full-stack platforms. Solved 500+ algorithmic problems.}
 
@@ -127,7 +133,7 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-5pt}
+\vspace{-6pt}
 %-----------TECHNICAL SKILLS-----------------
 
 \section{Technical Skills}
@@ -154,10 +160,8 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{2pt}
+\vspace{-2pt}
 %-----------PROFESSIONAL EXPERIENCE-----------------
-
-\vspace{-5pt}
 
 \section{Professional Experience}
 \resumeSubHeadingListStart
@@ -168,7 +172,7 @@
 {IIT (ISM) Dhanbad \href{https://drive.google.com/file/d/1fGnNIqnYq1WTspGg7r3Zp7TrMNZ5QbX-/view?usp=sharing}{\textnormal{[View Certificate]}}}{Dec 2025 -- Jan 2026}
 {Research Intern}{Dhanbad, Jharkhand, India}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=3pt]
+\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt]
 \small
 
 \item Analyzed and benchmarked 4+ CNN, QNN, and hybrid quantum-classical models on 70,000+ Fashion-MNIST images using TensorFlow, PennyLane, and Scikit-learn.
@@ -179,7 +183,7 @@
 
 \end{itemize}
 
-\vspace{-3pt}
+\vspace{-4pt}
 
 %-----------TATA STEEL-----------------
 
@@ -187,7 +191,7 @@
 {Tata Steel Limited \href{https://drive.google.com/file/d/1VWH84r5JKaunngK9K1cURNpRN-lC6naz/view?usp=sharing}{\textnormal{[View Certificate]}}}{May 2025 -- Aug 2025}
 {Software Engineering Intern}{Jamshedpur, Jharkhand, India}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=3pt]
+\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt]
 \small
 
 \item Developed Safety Lens, an AI safety-inspection platform using React.js, Node.js, Express.js, and REST APIs, scaling hazard detection to 7+ plants and 1,000+ observations.
@@ -200,26 +204,20 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-5pt}
+\vspace{-6pt}
 
 %-----------PROJECTS-----------------
-
-\vspace{-5pt}
 
 \section{Projects}
 \resumeSubHeadingListStart
 
 %-----------REWARDHUB-----------------
 
-\resumeSubheading
+\resumeProjectHeading
 {RewardHub --- Credit Card Benefit Activation Engine}
-{\hspace{-8pt}\href{https://github.com/krsna-thecoder/RewardHub}{\textnormal{[Source Code]}}}
-{\textit{Spring Boot, Java 21, Spring Security, JWT, React 18, JUnit 5}}
-{}
+{\href{https://github.com/krsna-thecoder/RewardHub}{\textnormal{[Source Code]}}}
 
-\vspace{3pt}
-
-\begin{itemize}[leftmargin=0.15in, itemsep=3pt]
+\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt]
 \small
 
 \item Architected an event-driven benefit-matching engine in Spring Boot 4.1 and Java 21, unifying 3 ingestion channels: REST, scheduled feed, and Stripe webhooks.
@@ -232,24 +230,20 @@
 
 \end{itemize}
 
-\vspace{-3pt}
+\vspace{-4pt}
 
 %-----------ACCESSCODE-----------------
 
-\resumeSubheading
+\resumeProjectHeading
 {AccessCode --- Login-Free Ephemeral File \& Text Sharing Platform}
-{\hspace{-8pt}\href{https://accesscode.live}{\textnormal{[Live]}} \hspace{6pt} \href{https://github.com/krsna-thecoder/EasyShare}{\textnormal{[Source Code]}}}
-{\textit{React, Vite, Tailwind CSS, Supabase, Deno Edge Functions, PostgreSQL, GitHub Actions}}
-{}
+{\href{https://accesscode.live}{\textnormal{[Live]}} \hspace{6pt} \href{https://github.com/krsna-thecoder/EasyShare}{\textnormal{[Source Code]}}}
 
-\vspace{3pt}
-
-\begin{itemize}[leftmargin=0.15in, itemsep=3pt]
+\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt]
 \small
 
-\item Launched a serverless file-sharing platform on React, Supabase, and Deno at accesscode.live, serving 1,000+ shares over 10+ days through GitHub Actions CI/CD.
+\item Launched a serverless file-sharing platform on React, Vite, and Tailwind CSS with Supabase and Deno at accesscode.live, serving 1,000+ shares over 10+ days through GitHub Actions CI/CD.
 
-\item Fortified the backend with 3 secured edge functions, 6 row-level-security policies, 5-minute signed URLs, and server-side SHA-256 verification.
+\item Fortified the backend with 3 secured edge functions, 6 PostgreSQL row-level-security policies, 5-minute signed URLs, and server-side SHA-256 verification.
 
 \item Automated a dual-layer pg\_cron pipeline purging up to 5,000 expired records per 10-minute cycle, using index-backed lookups across a 1.07-billion-code keyspace.
 
@@ -257,14 +251,12 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-5pt}
+\vspace{-6pt}
 %-----------ACHIEVEMENTS-----------------
-
-\vspace{-4pt}
 
 \section{Achievements and Awards}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=3pt]
+\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt]
 \small
 
 \item Inducted into Amazon ML Summer School 2026, selected among the top 3,000 from 130,000+ applicants nationwide.
