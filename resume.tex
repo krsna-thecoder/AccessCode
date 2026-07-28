@@ -8,7 +8,6 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -16,6 +15,7 @@
 \usepackage{enumitem}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage[a4paper,left=0.45in,right=0.45in,top=0.32in,bottom=0.32in]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \input{glyphtounicode}
@@ -34,55 +34,54 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.530in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.60in}
-\addtolength{\textheight}{1.15in}
-
 \urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-9pt}\bfseries\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-8pt}\bfseries\raggedright\normalsize
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2 \vspace{-3pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProject}[3]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #3 \\
     \end{tabular*}
-    \vspace{-3pt}
-    {\small\textit{#2}}\vspace{-3pt}
+    \vspace{-4pt}
+    {\small\textit{#2}}\vspace{-4pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt,partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Compact bullet list used for all achievement/experience items
+\newcommand{\bulletStart}{\begin{itemize}[leftmargin=0.14in,itemsep=0pt,parsep=0pt,topsep=1pt,partopsep=0pt]}
+\newcommand{\bulletEnd}{\end{itemize}}
 
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
@@ -91,19 +90,18 @@
 
 %----------HEADING-----------------
 
-\vspace{-24pt}
+\vspace*{-14pt}
 
 \begin{center}
-    {\LARGE \textbf{KRISHNA KUMAR}} \\ \vspace{3pt}
-    
-    +91-8797985328 \hspace{10pt}
-    \href{mailto:krsna.thecoder@gmail.com}{krsna.thecoder@gmail.com} \\ \vspace{2pt}
-    \href{https://github.com/krsna-thecoder}{GitHub} \hspace{14pt}
-    \href{https://linkedin.com/in/krishna-kumar-7b821b365}{LinkedIn} \hspace{14pt}
-    \href{https://leetcode.com/u/KRSNA_THECODER/}{LeetCode}
+    {\fontsize{15pt}{16pt}\selectfont\textbf{KRISHNA KUMAR}} \\ \vspace{2pt}
+    {\small +91-8797985328 \hspace{8pt}
+    \href{mailto:krsna.thecoder@gmail.com}{krsna.thecoder@gmail.com} \hspace{8pt}
+    \href{https://github.com/krsna-thecoder}{GitHub} \hspace{8pt}
+    \href{https://linkedin.com/in/krishna-kumar-7b821b365}{LinkedIn} \hspace{8pt}
+    \href{https://leetcode.com/u/KRSNA_THECODER/}{LeetCode}}
 \end{center}
 
-\vspace{-6pt}
+\vspace{-8pt}
 
 %-----------EDUCATION-----------------
 
@@ -116,7 +114,7 @@
 
 \resumeSubHeadingListEnd
 
-\vspace{-6pt}
+\vspace{-8pt}
 %-----------TECHNICAL SKILLS-----------------
 
 \section{TECHNICAL SKILLS}
@@ -127,7 +125,7 @@
 {Java, Python, C++, C, JavaScript, SQL, HTML5, CSS3}
 
 \resumeSubItem{Backend Development}
-{Spring Boot, Spring Security, Spring Data JPA, Hibernate, Node.js, Express.js, RESTful APIs, JWT, Event-Driven Architecture}
+{Spring Boot, Spring Security, Spring Data JPA, Hibernate, Node.js, RESTful APIs, JWT, Event-Driven Architecture}
 
 \resumeSubItem{Web Development}
 {React.js, Next.js, Vite, Tailwind CSS, Bootstrap, Responsive Design}
@@ -139,14 +137,14 @@
 {PostgreSQL, MongoDB, Supabase, Firebase, Database Design, Query Optimization}
 
 \resumeSubItem{Developer Tools}
-{Git, GitHub, Docker, AWS, Maven, JUnit 5, Mockito, Postman, Swagger/OpenAPI, GitHub Actions CI/CD, VS Code}
+{Git, GitHub, Docker, AWS, Maven, JUnit 5, Mockito, Postman, Swagger/OpenAPI, CI/CD}
 
 \resumeSubItem{Software Engineering}
 {Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, System Design, Software Development Life Cycle, Agile}
 
 \resumeSubHeadingListEnd
 
-\vspace{-4pt}
+\vspace{-6pt}
 %-----------PROFESSIONAL EXPERIENCE-----------------
 
 \section{PROFESSIONAL EXPERIENCE}
@@ -158,7 +156,7 @@
 {IIT (ISM) Dhanbad, Jharkhand, India \href{https://drive.google.com/file/d/1fGnNIqnYq1WTspGg7r3Zp7TrMNZ5QbX-/view?usp=sharing}{\normalfont Certificate}}{Dec 2025 -- Jan 2026}
 {Research Intern}{}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=2pt]
+\bulletStart
 \small
 
 \item Benchmarked 4 CNN, QNN, and hybrid quantum-classical models across 70,000 Fashion-MNIST image samples using TensorFlow, PennyLane, and Scikit-learn
@@ -167,9 +165,9 @@
 
 \item Improved accuracy by 10 percent over single-filter quantum baselines through multi-filter quantum encoder architectures evaluated across 40 training epochs
 
-\end{itemize}
+\bulletEnd
 
-\vspace{-4pt}
+\vspace{-5pt}
 
 %-----------TATA STEEL-----------------
 
@@ -177,7 +175,7 @@
 {Tata Steel Limited, Jamshedpur, Jharkhand, India \href{https://drive.google.com/file/d/1VWH84r5JKaunngK9K1cURNpRN-lC6naz/view?usp=sharing}{\normalfont Certificate}}{May 2025 -- Aug 2025}
 {Software Engineering Intern}{}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=2pt]
+\bulletStart
 \small
 
 \item Developed Safety Lens, an AI-powered industrial safety inspection platform using React.js, Node.js, Express.js, and RESTful APIs across 7 plant locations and 1,000+ safety observations
@@ -186,11 +184,11 @@
 
 \item Collaborated with plant safety officers to automate detection of 3 hazard categories covering PPE violations, unsafe conditions, and compliance risks
 
-\end{itemize}
+\bulletEnd
 
 \resumeSubHeadingListEnd
 
-\vspace{-6pt}
+\vspace{-7pt}
 
 %-----------TECHNICAL PROJECTS-----------------
 
@@ -204,7 +202,7 @@
 {Technologies: Java 21, Spring Boot, Spring Security, JWT, Spring Data JPA, React 18, JUnit 5, Mockito, PostgreSQL}
 {\href{https://github.com/krsna-thecoder/RewardHub}{Source Code}}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=2pt]
+\bulletStart
 \small
 
 \item Architected an event-driven benefit-matching engine in Java 21 and Spring Boot, unifying 3 transaction ingestion channels across REST APIs, scheduled feeds, and Stripe webhooks
@@ -215,9 +213,9 @@
 
 \item Validated the ingestion-to-payout pipeline with 82 JUnit 5 and Mockito tests across 23 test classes, sustaining 33 to 67 ms warm read latency
 
-\end{itemize}
+\bulletEnd
 
-\vspace{-4pt}
+\vspace{-5pt}
 
 %-----------ACCESSCODE-----------------
 
@@ -226,7 +224,7 @@
 {Technologies: React, Vite, Tailwind CSS, Supabase, Deno Edge Functions, PostgreSQL, GitHub Actions}
 {\href{https://accesscode.live}{Live Demo} \hspace{6pt} \href{https://github.com/krsna-thecoder/EasyShare}{Source Code}}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=2pt]
+\bulletStart
 \small
 
 \item Deployed a serverless file and text sharing platform on React, Supabase, and Deno serving 1,008 shares over 10 days from a 150 KB gzipped bundle
@@ -237,19 +235,17 @@
 
 \item Delivered a responsive React interface with drag-and-drop uploads and real-time expiry countdowns, automated end-to-end through a GitHub Actions CI/CD pipeline
 
-\end{itemize}
+\bulletEnd
 
 \resumeSubHeadingListEnd
 
-\vspace{-6pt}
+\vspace{-7pt}
 %-----------ACHIEVEMENTS-----------------
 
 \section{ACHIEVEMENTS AND AWARDS}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=2pt]
+\bulletStart
 \small
-
-\item Selected for Amazon ML Summer School 2026 among the top 3,000 candidates from over 130,000 national applicants
 
 \item Qualified GATE CSE 2026 and ranked in the top 1 percent of the Computer Science department on CGPA basis \hfill \href{https://drive.google.com/file/d/1m1m7XK3jzrGAatJ5iKAi7g4lCd_C0xNe/view?usp=sharing}{Certificate}
 
@@ -257,20 +253,18 @@
 
 \item Reached finalist and semifinalist stages in 2 national-level hackathons \hfill \href{https://drive.google.com/file/d/1HwohHcq_5_y6GbCBGyoA9yy63WKSz31K/view?usp=sharing}{Certificate}
 
-\end{itemize}
+\bulletEnd
 
-\vspace{-6pt}
+\vspace{-7pt}
 %-----------CERTIFICATIONS-----------------
 
 \section{CERTIFICATIONS AND TRAINING}
 
-\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=2pt]
+\bulletStart
 \small
 
-\item Namaste React Full-Stack Development covering React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and deployment
+\item Selected for Amazon ML Summer School 2026 among the top 3,000 candidates from over 130,000 national applicants
 
-\item Infosys Springboard Virtual Internship covering software engineering, web development, and industry-level project workflows
-
-\end{itemize}
+\bulletEnd
 
 \end{document}
